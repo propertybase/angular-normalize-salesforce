@@ -62,6 +62,31 @@ gulp.task 'version', ->
     "Angular Normalize Salesforce Version: #{packageJSON.version}"
   )
 
+inc = (importance) ->
+  gulp.src(['./package.json', './bower.json'])
+    # bump the version number in those files
+    .pipe($.bump({type: importance}))
+    # save it back to filesystem
+    .pipe(gulp.dest('./'))
+    # commit the changed version number
+    .pipe($.git.commit('bumps package version'))
+
+    # read only one file to get the version number
+    .pipe($.filter('package.json'))
+    # **tag it in the repository**
+    .pipe($.tagVersion())
+    # push the tags to master
+    .pipe($.git.push('origin', 'master', { args: '--tags' }))
+
+gulp.task 'patch', ->
+  inc('patch')
+
+gulp.task 'minor', ->
+  inc('minor')
+
+gulp.task 'major', ->
+  inc('major')
+
 #-------------------------------------------------
 
 gulp.task 'test', ->
