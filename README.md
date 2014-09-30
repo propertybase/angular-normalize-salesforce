@@ -1,6 +1,6 @@
 # Angular Normalize Salesforce
 
-[![Build Status](https://travis-ci.org/propertybase/angular-normalize-salesforce.svg)](https://travis-ci.org/propertybase/angular-normalize-salesforce)
+[![Build Status](https://travis-ci.org/propertybase/angular-normalize-salesforce.svg)](https://travis-ci.org/propertybase/angular-normalize-salesforce) [![devDependency Status](https://david-dm.org/propertybase/angular-normalize-salesforce/dev-status.svg)](https://david-dm.org/propertybase/angular-normalize-salesforce#info=devDependencies)
 
 Angular module to normalize and denormalize Salesforce fields and object names.
 
