@@ -2,9 +2,13 @@
   "name": "angular-normalize-salesforce",
   "version": "0.1.2",
   "authors": [
-    "Konstantin Krauss <konstantin@propertybase.com>"
+    "Konstantin Krauss <konstantin@propertybase.com> (http://www.propertybase.com)"
   ],
   "description": "Angular module to normalize and denormalize salesforce field and object names",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/propertybase/angular-normalize-salesforce.git"
+  },
   "main": "dist/angular-normalize-salesforce.js",
   "keywords": [
     "angular",
