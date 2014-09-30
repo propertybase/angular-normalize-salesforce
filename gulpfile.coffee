@@ -74,7 +74,7 @@ inc = (importance) ->
     # read only one file to get the version number
     .pipe($.filter('package.json'))
     # **tag it in the repository**
-    .pipe($.tagVersion())
+    .pipe($.tagVersion({prefix: ''}))
     # push the tags to master
     .pipe($.git.push('origin', 'master', { args: '--tags' }))
 
