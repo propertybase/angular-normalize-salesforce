@@ -1,0 +1,29 @@
+{
+  "name": "angular-normalize-salesforce",
+  "version": "0.1.0",
+  "authors": [
+    "Konstantin Krauss <konstantin@propertybase.com>"
+  ],
+  "description": "Angular module to normalize and denormalize salesforce field and object names",
+  "main": "dist/angular-normalize-salesforce.js",
+  "keywords": [
+    "angular",
+    "salesforce"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".travis.yml"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.25"
+  }
+}
