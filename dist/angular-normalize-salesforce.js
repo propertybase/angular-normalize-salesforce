@@ -22,10 +22,10 @@ angular.module('angular-normalize-salesforce').service('normalizeSalesforce', No
     this._denormalizeObject = __bind(this._denormalizeObject, this);
     this._denormalizeArray = __bind(this._denormalizeArray, this);
     this._denormalizeString = __bind(this._denormalizeString, this);
-    this.denormalizeObjectName = __bind(this.denormalizeObjectName, this);
-    this.denormalize = __bind(this.denormalize, this);
     this._normalizeObject = __bind(this._normalizeObject, this);
     this._normalizeArray = __bind(this._normalizeArray, this);
+    this.denormalizeObjectName = __bind(this.denormalizeObjectName, this);
+    this.denormalize = __bind(this.denormalize, this);
     this.normalize = __bind(this.normalize, this);
     this.standardFields = ansSalesforceStandardFields;
     this.standardObjects = ansSalesforceStandardObjects;
@@ -47,8 +47,27 @@ angular.module('angular-normalize-salesforce').service('normalizeSalesforce', No
     }
   };
 
+  NormalizeSalesforce.prototype.denormalize = function(part, sObject) {
+    var type_name;
+    type_name = Object.prototype.toString.call(part);
+    switch (false) {
+      case !_(part).isString():
+        return this._denormalizeString(part, sObject);
+      case !_(part).isArray():
+        return this._denormalizeArray(part, sObject);
+      case !_(part).isObject():
+        return this._denormalizeObject(part, sObject);
+      default:
+        throw new Error("Type " + type_name + " not supported. Only String, Array and Object are supported.");
+    }
+  };
+
+  NormalizeSalesforce.prototype.denormalizeObjectName = function(name) {
+    return this._denormalize(name, this.standardObjects);
+  };
+
   NormalizeSalesforce.prototype._normalizeString = function(string) {
-    return string.toLowerCase().replace('__c', '');
+    return string.toLowerCase().replace(/__c$/, '');
   };
 
   NormalizeSalesforce.prototype._normalizeArray = function(array) {
@@ -72,25 +91,6 @@ angular.module('angular-normalize-salesforce').service('normalizeSalesforce', No
       };
     })(this));
     return normalized;
-  };
-
-  NormalizeSalesforce.prototype.denormalize = function(part, sObject) {
-    var type_name;
-    type_name = Object.prototype.toString.call(part);
-    switch (false) {
-      case !_(part).isString():
-        return this._denormalizeString(part, sObject);
-      case !_(part).isArray():
-        return this._denormalizeArray(part, sObject);
-      case !_(part).isObject():
-        return this._denormalizeObject(part, sObject);
-      default:
-        throw new Error("Type " + type_name + " not supported. Only String, Array and Object are supported.");
-    }
-  };
-
-  NormalizeSalesforce.prototype.denormalizeObjectName = function(name) {
-    return this._denormalize(name, this.standardObjects);
   };
 
   NormalizeSalesforce.prototype._denormalize = function(part, avoidList) {

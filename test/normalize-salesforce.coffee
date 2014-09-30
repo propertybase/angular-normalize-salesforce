@@ -26,6 +26,8 @@ describe 'Service: normalizeSalesforce', ->
     it 'preserves namespace to avoid field conflicts', ->
       expect normalizeSalesforce.normalize('ns__Field__c')
         .to.equal 'ns__field'
+      expect normalizeSalesforce.normalize('ns__cField__c')
+        .to.equal 'ns__cfield'
 
     # ------------------
     # Object Operations
@@ -86,6 +88,10 @@ describe 'Service: normalizeSalesforce', ->
       it 'keeps standard fields clean', ->
         expect normalizeSalesforce.denormalize('id', object)
           .to.equal 'id'
+
+      it 'supports also denormalized custom object names', ->
+        expect normalizeSalesforce.denormalize('field', 'CustomObject__c')
+          .to.equal 'field__c'
 
     context 'of standard object', ->
       object = 'account'

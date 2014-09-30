@@ -25,24 +25,6 @@ angular.module('angular-normalize-salesforce')
             Only String, Array and Object are supported."
           )
 
-    _normalizeString: (string) ->
-      string.toLowerCase().replace('__c', '')
-
-    _normalizeArray: (array) =>
-      _.map array, (element) =>
-        @normalize(element)
-
-    _normalizeObject: (object) =>
-      normalized = {}
-
-      _(object).forEach (value, key) =>
-        if _(value).isObject() && !_(value).isFunction()
-          normalized[@normalize(key)] = @normalize(value)
-        else
-          normalized[@normalize(key)] = value
-
-      normalized
-
     denormalize: (part, sObject) =>
       type_name = Object.prototype.toString.call(part)
 
@@ -58,6 +40,26 @@ angular.module('angular-normalize-salesforce')
 
     denormalizeObjectName: (name) =>
       @_denormalize name, @standardObjects
+
+    # PRIVATE ----------
+
+    _normalizeString: (string) ->
+      string.toLowerCase().replace(/__c$/, '')
+
+    _normalizeArray: (array) =>
+      _.map array, (element) =>
+        @normalize(element)
+
+    _normalizeObject: (object) =>
+      normalized = {}
+
+      _(object).forEach (value, key) =>
+        if _(value).isObject() && !_(value).isFunction()
+          normalized[@normalize(key)] = @normalize(value)
+        else
+          normalized[@normalize(key)] = value
+
+      normalized
 
     _denormalize: (part, avoidList) ->
       unless _(avoidList).contains(part)
