@@ -32,5 +32,8 @@
     "karma-spec-reporter": "0.0.13",
     "mocha": "^1.21.4",
     "run-sequence": "^1.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start karma.conf.coffee --single-run --reporters=dots --browsers PhantomJS"
   }
 }
