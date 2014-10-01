@@ -29,7 +29,7 @@ gulp.task 'coffee', ->
       .pipe $.coffee({bare: true}).on('error', $.util.log)
       .pipe $.ngAnnotate()
       .pipe $.concat "#{packageJSON.name}.js"
-    .pipe $.sourcemaps.write('.')
+    .pipe $.sourcemaps.write()
     .pipe gulp.dest 'dist'
 
 gulp.task 'coffee:min', ->
