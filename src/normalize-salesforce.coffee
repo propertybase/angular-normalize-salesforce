@@ -1,13 +1,13 @@
 'use strict'
 
 angular.module('angular-normalize-salesforce')
-.service 'normalizeSalesforce',
-  class NormalizeSalesforce
-    constructor: (
-      ansSalesforceSObjects,
-      ansSalesforceStandardObjects,
-      ansSalesforceStandardFields
-    ) ->
+.factory 'normalizeSalesforce', (
+  ansSalesforceSObjects,
+  ansSalesforceStandardObjects,
+  ansSalesforceStandardFields
+) ->
+  new class NormalizeSalesforce
+    constructor: ->
       @standardFields = ansSalesforceStandardFields
       @standardObjects = ansSalesforceStandardObjects
       @sObjectFields = ansSalesforceSObjects
