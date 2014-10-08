@@ -44,6 +44,8 @@ In order to support all Salesforce standard objects, all standard fields have
 to be defined in the source code. We currently support the standard objects:
 
  * `Account`
+ * `Contact`
+ * `Event`
  * `Task`
 
 __If you need more objects (or if there is a change in the Salesforce API)
