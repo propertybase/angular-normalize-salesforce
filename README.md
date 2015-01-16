@@ -47,6 +47,7 @@ to be defined in the source code. We currently support the standard objects:
  * `Contact`
  * `Event`
  * `Task`
+ * `User`
 
 __If you need more objects (or if there is a change in the Salesforce API)
 please send me a Pull Request!__
