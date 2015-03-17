@@ -46,6 +46,13 @@ describe 'Service: normalizeSalesforce', ->
           'ns__field1': 'value3'
           'name': 'value4'
 
+    it 'normalizes falsy values', ->
+      object =
+        'field1': 'value1'
+        'field2': false
+        'field3': 'value3'
+      expect(normalizeSalesforce.normalize object).to.deep.equal(object)
+
     it 'supports nested objects', ->
       object =
         'Field1__c': 'value1'

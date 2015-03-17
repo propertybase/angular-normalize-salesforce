@@ -58,6 +58,7 @@ angular.module('angular-normalize-salesforce')
           normalized[@normalize(key)] = @normalize(value)
         else
           normalized[@normalize(key)] = value
+        true
 
       normalized
 
@@ -90,5 +91,6 @@ angular.module('angular-normalize-salesforce')
           )
         else
           denormalized[@denormalize(key, sObject)] = value
+        true
 
       denormalized
