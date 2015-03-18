@@ -1,9 +1,11 @@
 {
   "name": "angular-normalize-salesforce",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Angular module to normalize and denormalize salesforce field and object names",
   "contributors": [
-    "Konstantin Krauss <konstantin@propertybase.com> (http://www.propertybase.com)"
+    "Konstantin Krauss <konstantin@propertybase.com> (http://www.propertybase.com)",
+    "Christian Schultheiss <christian@propertybase.com> (http://www.propertybase.com)",
+    "Philipp Frank <philipp@propertybase.com> (http://www.propertybase.com)"
   ],
   "dependencies": {},
   "devDependencies": {
