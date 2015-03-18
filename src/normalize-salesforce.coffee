@@ -12,18 +12,24 @@ angular.module('angular-normalize-salesforce')
       @standardObjects = ansSalesforceStandardObjects
       @sObjectFields = ansSalesforceSObjects
 
-    normalize: (part) =>
+    normalize: (part, blacklist=[], currentPath="") =>
       type_name = Object.prototype.toString.call(part)
 
-      switch
-        when _(part).isString() then @_normalizeString(part)
-        when _(part).isArray()  then @_normalizeArray(part)
-        when _(part).isObject() then @_normalizeObject(part)
-        else
-          throw new Error(
-            "Type #{type_name} not supported.
-            Only String, Array and Object are supported."
-          )
+      if _(blacklist).contains(part) || _(blacklist).contains(currentPath)
+        part
+      else
+        switch
+          when _(part).isString()
+            @_normalizeString(part)
+          when _(part).isArray()
+            @_normalizeArray(part, blacklist)
+          when _(part).isObject()
+            @_normalizeObject(part, blacklist, currentPath)
+          else
+            throw new Error(
+              "Type #{type_name} not supported.
+              Only String, Array and Object are supported."
+            )
 
     denormalize: (part, sObject) =>
       type_name = Object.prototype.toString.call(part)
@@ -46,18 +52,23 @@ angular.module('angular-normalize-salesforce')
     _normalizeString: (string) ->
       string.toLowerCase().replace(/__c$/, '')
 
-    _normalizeArray: (array) =>
+    _normalizeArray: (array, blacklist, currentPath) =>
       _.map array, (element) =>
-        @normalize(element)
+        @normalize(element, blacklist)
 
-    _normalizeObject: (object) =>
+    _normalizeObject: (object, blacklist, currentPath) =>
       normalized = {}
 
       _(object).forEach (value, key) =>
         if _(value).isObject() && !_(value).isFunction()
-          normalized[@normalize(key)] = @normalize(value)
+          nextPath = _.compact([currentPath].concat([key])).join('.')
+          normalized[@normalize(key, blacklist)] = @normalize(
+            value,
+            blacklist,
+            nextPath
+          )
         else
-          normalized[@normalize(key)] = value
+          normalized[@normalize(key, blacklist)] = value
         true
 
       normalized

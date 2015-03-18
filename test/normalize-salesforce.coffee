@@ -75,6 +75,45 @@ describe 'Service: normalizeSalesforce', ->
       )
 
     # ------------------
+    # Blacklist Pattern
+
+    it 'allows to define a blacklist which is not normalized', ->
+      object =
+        'Field__c': 'value1__c'
+        'Field2__c': [
+          'Field__c',
+          'Field1__c',
+          'Field2__c'
+        ]
+        'Field3__c':
+          'Field4__c': 'Value2__c'
+          'Field5__c': [
+            'IDa1',
+            'IDa2'
+          ]
+
+      expect normalizeSalesforce.normalize('Field__c', ['Field__c'])
+        .to.equal 'Field__c'
+
+      expect normalizeSalesforce.normalize(
+        object,
+        ['Field__c', 'Field3__c.Field5__c']
+      )
+        .to.deep.equal
+          'Field__c': 'value1__c'
+          'field2': [
+            'Field__c',
+            'field1',
+            'field2'
+          ]
+          'field3':
+            'field4': 'Value2__c'
+            'field5': [
+              'IDa1',
+              'IDa2'
+            ]
+
+    # ------------------
 
     it 'throws an error if unsupported type is used', ->
       expect -> normalizeSalesforce.normalize(2)
