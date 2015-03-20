@@ -13,6 +13,9 @@ angular.module('angular-normalize-salesforce')
       @sObjectFields = ansSalesforceSObjects
 
     normalize: (part) =>
+      if _.isNull(part) || _.isUndefined(part)
+        return if _.isNull(part) then null else undefined
+
       type_name = Object.prototype.toString.call(part)
 
       switch

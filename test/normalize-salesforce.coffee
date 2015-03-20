@@ -80,6 +80,12 @@ describe 'Service: normalizeSalesforce', ->
       expect -> normalizeSalesforce.normalize(2)
         .to.throw Error
 
+    it 'ignores null and undefined', ->
+      expect normalizeSalesforce.normalize(null)
+        .to.be.null
+      expect normalizeSalesforce.normalize(undefined)
+        .to.be.undefined
+
   describe '#denormalize', ->
     context 'of custom object', ->
       object = 'customobject'
