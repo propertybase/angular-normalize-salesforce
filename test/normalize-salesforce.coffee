@@ -102,6 +102,12 @@ describe 'Service: normalizeSalesforce', ->
         expect normalizeSalesforce.denormalize('id', object)
           .to.equal 'id'
 
+        expect normalizeSalesforce.denormalize('recordtypeid', object)
+          .to.equal 'recordtypeid'
+
+        expect normalizeSalesforce.denormalize('ownerid', object)
+          .to.equal 'ownerid'
+
       it 'supports also denormalized custom object names', ->
         expect normalizeSalesforce.denormalize('field', 'CustomObject__c')
           .to.equal 'field__c'

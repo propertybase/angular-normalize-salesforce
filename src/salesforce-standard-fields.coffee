@@ -11,5 +11,7 @@ angular.module('angular-normalize-salesforce')
   'lastmodifiedbyid'
   'systemmodstamp'
   'lastactivitydate'
-  'currencyisocode'
+  'currencyisocode',
+  'ownerid',
+  'recordtypeid'
 ]
