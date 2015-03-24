@@ -123,6 +123,22 @@ describe 'Service: normalizeSalesforce', ->
         expect normalizeSalesforce.denormalize('shippingcity', object)
           .to.equal 'shippingcity'
 
+    context 'parent relations', ->
+      it 'denormalizes parent relation fields if a mapping is provided', ->
+        expect normalizeSalesforce.denormalize(
+          'owner.lastname',
+          'contact',
+          {'owner':'user'}
+        )
+          .to.equal 'owner.lastname'
+
+        expect normalizeSalesforce.denormalize(
+          'listing.price',
+          'listing',
+          {'listing':'listing'}
+        )
+          .to.equal 'listing.price__c'
+
     it 'supports arrays', ->
       expect(normalizeSalesforce.denormalize(
         ['id', 'field1', 'ns__field2'], 'customobject'

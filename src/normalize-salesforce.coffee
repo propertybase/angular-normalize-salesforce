@@ -28,11 +28,11 @@ angular.module('angular-normalize-salesforce')
             Only String, Array and Object are supported."
           )
 
-    denormalize: (part, sObject) =>
+    denormalize: (part, sObject, map={}) =>
       type_name = Object.prototype.toString.call(part)
 
       switch
-        when _(part).isString() then @_denormalizeString(part, sObject)
+        when _(part).isString() then @_denormalizeString(part, sObject, map)
         when _(part).isArray()  then @_denormalizeArray(part, sObject)
         when _(part).isObject() then @_denormalizeObject(part, sObject)
         else
@@ -65,20 +65,27 @@ angular.module('angular-normalize-salesforce')
 
       normalized
 
-    _denormalize: (part, avoidList) ->
+    _denormalize: (part, avoidList, prefix=undefined) ->
       unless _(avoidList).contains(part)
-        "#{part}__c"
+        if prefix then "#{prefix}.#{part}__c" else "#{part}__c"
       else
-        part
+        if prefix then "#{prefix}.#{part}" else part
 
-    _denormalizeString: (string, sObject) =>
-      sObject = @normalize(sObject)
+    _denormalizeString: (string, sObject, map) =>
+      stringParts = string.split('.')
+      if stringParts.length > 1 && _.has(map,stringParts[0])
+        parentRef = stringParts[0]
+        string = stringParts[1]
+        sObject = @normalize(map[parentRef])
+      else
+        string = stringParts[0]
+        sObject = @normalize(sObject)
 
       standardFields = @standardFields
       if _(@sObjectFields).has(sObject)
         standardFields = _.uniq(standardFields.concat(@sObjectFields[sObject]))
 
-      @_denormalize string, standardFields
+      @_denormalize string, standardFields, parentRef
 
     _denormalizeArray: (array, sObject) =>
       _.map array, (element) =>
