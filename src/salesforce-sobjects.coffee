@@ -355,6 +355,7 @@ angular.module('angular-normalize-salesforce')
     'userpreferencesshowworkphonetoexternalusers',
     'userpreferencestaskreminderscheckboxdefault',
     'userroleid',
+    'usertype',
     'wirelessemail'
   ]
 }
