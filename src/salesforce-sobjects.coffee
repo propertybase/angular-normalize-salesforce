@@ -56,6 +56,17 @@ angular.module('angular-normalize-salesforce')
     'type',
     'website'
   ]
+  attachment: [
+    'body',
+    'bodylength',
+    'connectionreceivedid',
+    'connectionsentid',
+    'contenttype',
+    'description',
+    'ispartnershared',
+    'isprivate',
+    'parentid'
+  ]
   contact: [
     'accountid',
     'assistantname',
