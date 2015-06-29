@@ -41,16 +41,7 @@ The `normalizeSalesforce` service offers 3 main methods:
 ### sObject Support
 
 In order to support all Salesforce standard objects, all standard fields have
-to be defined in the source code. We currently support the standard objects:
-
- * `Account`
- * `Contact`
- * `Event`
- * `Task`
- * `User`
-
-__If you need more objects (or if there is a change in the Salesforce API)
-please send me a Pull Request!__
+to be defined in the source code. We currently support all standard objects from API v34.0
 
 ## Example Usage
 
@@ -107,3 +98,19 @@ angular.module('myModule')
 ### Build
 
  * Build the whole project with `gulp`
+
+### [Internal] Load describe data from Salesforce REST JS
+
+```javascript
+DEBUG.pbJSRestConnector.client.apiVersion = "v34.0"
+
+allObjects = []
+
+DEBUG.pbJSRestConnector.global(function(cb){allObjects = cb})
+
+allObjectsLowercased = _(allObjects.sobjects).filter({custom: false}).map('name').map(function(name){return name.toLowerCase()}).value()
+
+standardFields = {}
+
+_(allObjectsLowercased).each(function(objectName){DEBUG.pbJSRestConnector.describe(objectName,function(cb){standardFields[objectName] = _(cb.fields).filter({custom:false}).map('name').map(function(name){return name.toLowerCase()}).value()})}).value()
+```
