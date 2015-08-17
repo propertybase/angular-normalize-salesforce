@@ -114,3 +114,9 @@ standardFields = {}
 
 _(allObjectsLowercased).each(function(objectName){DEBUG.pbJSRestConnector.describe(objectName,function(cb){standardFields[objectName] = _(cb.fields).filter({custom:false}).map('name').map(function(name){return name.toLowerCase()}).value()})}).value()
 ```
+
+### [Internal] Add fields from new dataSet
+
+```javascript
+_(newData).each(function(value, key){if (!_.has(original, key)) {original[key] = value } else {_.each(value,function(field){if (!_.contains(original[key], field)) {original[key].push(field) } }) } }).value()
+```

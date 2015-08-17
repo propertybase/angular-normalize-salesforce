@@ -6,6 +6,7 @@ angular.module('angular-normalize-salesforce')
     "id",
     "relationid",
     "eventid",
+    "accountid",
     "respondeddate",
     "response",
     "createddate",
@@ -67,7 +68,8 @@ angular.module('angular-normalize-salesforce')
     "jigsaw",
     "jigsawcompanyid",
     "accountsource",
-    "sicdesc"
+    "sicdesc",
+    "iscustomerportal"
   ],
   "accountcontactrole": [
     "id",
@@ -141,6 +143,16 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "isdeleted"
+  ],
+  "accounttag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
   ],
   "actionlinktemplate": [
     "id",
@@ -230,7 +242,9 @@ angular.module('angular-normalize-salesforce')
     "reminderdatetime",
     "isreminderset",
     "enddatetime",
-    "startdatetime"
+    "startdatetime",
+    "primarywhoid",
+    "primaryaccountid"
   ],
   "announcement": [
     "id",
@@ -414,6 +428,16 @@ angular.module('angular-normalize-salesforce')
     "contenttype",
     "contentsize",
     "insertedbyid"
+  ],
+  "assettag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
   ],
   "assignmentrule": [
     "id",
@@ -776,6 +800,16 @@ angular.module('angular-normalize-salesforce')
     "lastreferenceddate",
     "campaignmemberrecordtypeid"
   ],
+  "campaigntag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
   "case": [
     "id",
     "isdeleted",
@@ -806,7 +840,9 @@ angular.module('angular-normalize-salesforce')
     "lastmodifiedbyid",
     "systemmodstamp",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "hascommentsunreadbyowner",
+    "hasselfservicecomments"
   ],
   "casecomment": [
     "id",
@@ -819,6 +855,16 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "isdeleted"
+  ],
+  "casetag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
   ],
   "casefeed": [
     "id",
@@ -1200,7 +1246,8 @@ angular.module('angular-normalize-salesforce')
     "isemailbounced",
     "photourl",
     "jigsaw",
-    "jigsawcontactid"
+    "jigsawcontactid",
+    "canallowportalselfreg"
   ],
   "contactfeed": [
     "id",
@@ -1243,6 +1290,16 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "isdeleted"
+  ],
+  "contacttag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
   ],
   "contentdistribution": [
     "id",
@@ -1489,7 +1546,15 @@ angular.module('angular-normalize-salesforce')
     "systemmodstamp",
     "lastactivitydate",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "shippingstreet",
+    "shippingcity",
+    "shippingstate",
+    "shippingpostalcode",
+    "shippingcountry",
+    "shippinglatitude",
+    "shippinglongitude",
+    "shippingaddress"
   ],
   "contractcontactrole": [
     "id",
@@ -1547,6 +1612,16 @@ angular.module('angular-normalize-salesforce')
     "lastmodifiedbyid",
     "lastmodifieddate",
     "systemmodstamp"
+  ],
+  "contracttag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
   ],
   "contentfoldermember": [
     "id",
@@ -1720,6 +1795,16 @@ angular.module('angular-normalize-salesforce')
     "contentsize",
     "insertedbyid"
   ],
+  "dashboardtag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
   "datedconversionrate": [
     "id",
     "isocode",
@@ -1735,6 +1820,7 @@ angular.module('angular-normalize-salesforce')
   "declinedeventrelation": [
     "id",
     "relationid",
+    "accountid",
     "eventid",
     "respondeddate",
     "response",
@@ -1788,6 +1874,16 @@ angular.module('angular-normalize-salesforce')
     "documentsequence",
     "createddate",
     "createdbyid"
+  ],
+  "documenttag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
   ],
   "domain": [
     "id",
@@ -2051,7 +2147,10 @@ angular.module('angular-normalize-salesforce')
     "recurrenceinstance",
     "recurrencemonthofyear",
     "reminderdatetime",
-    "isreminderset"
+    "isreminderset",
+    "whocount",
+    "whatcount",
+    "isvisibleinselfservice"
   ],
   "eventlogfile": [
     "id",
@@ -2125,7 +2224,34 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "systemmodstamp",
-    "isdeleted"
+    "isdeleted",
+    "iswhat",
+    "isparent",
+    "isinvitee",
+    "accountid"
+  ],
+  "eventtag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "eventwhorelation": [
+    "id",
+    "relationid",
+    "eventid",
+    "accountid",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "isdeleted",
+    "type"
   ],
   "externaldatauserauth": [
     "id",
@@ -2439,7 +2565,11 @@ angular.module('angular-normalize-salesforce')
     "ismerged",
     "creatorfullphotourl",
     "creatorsmallphotourl",
-    "creatorname"
+    "creatorname",
+    "attachmentname",
+    "attachmentcontenttype",
+    "attachmentlength",
+    "attachmentbody"
   ],
   "installedmobileapp": [
     "id",
@@ -2535,7 +2665,12 @@ angular.module('angular-normalize-salesforce')
     "jigsaw",
     "jigsawcontactid",
     "emailbouncedreason",
-    "emailbounceddate"
+    "emailbounceddate",
+    "recordtypeid",
+    "hasoptedoutofemail",
+    "donotcall",
+    "hasoptedoutoffax",
+    "lasttransferdate"
   ],
   "leadshare": [
     "id",
@@ -2678,7 +2813,9 @@ angular.module('angular-normalize-salesforce')
     "reminderdatetime",
     "isreminderset",
     "enddatetime",
-    "startdatetime"
+    "startdatetime",
+    "primarywhoid",
+    "primaryaccountid"
   ],
   "listviewchartinstance": [
     "id",
@@ -2745,7 +2882,8 @@ angular.module('angular-normalize-salesforce')
     "createdbyid",
     "lastmodifieddate",
     "lastmodifiedbyid",
-    "systemmodstamp"
+    "systemmodstamp",
+    "category"
   ],
   "matchingrule": [
     "id",
@@ -2907,7 +3045,9 @@ angular.module('angular-normalize-salesforce')
     "reminderdatetime",
     "isreminderset",
     "enddatetime",
-    "startdatetime"
+    "startdatetime",
+    "primarywhoid",
+    "primaryaccountid"
   ],
   "opportunity": [
     "id",
@@ -2944,7 +3084,8 @@ angular.module('angular-normalize-salesforce')
     "fiscalyear",
     "fiscal",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "recordtypeid"
   ],
   "oauthtoken": [
     "id",
@@ -3370,7 +3511,20 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "systemmodstamp",
-    "namespaceprefix"
+    "namespaceprefix",
+    "permissionsdataexport",
+    "permissionsmanageselfservice",
+    "permissionsmanagecssusers",
+    "permissionsactivateorder",
+    "permissionsmanagedashboards",
+    "permissionsapiuseronly",
+    "permissionseditactivatedorders",
+    "permissionsinboundmigrationtoolsuser",
+    "permissionseditreports",
+    "permissionsoutboundmigrationtoolsuser",
+    "permissionsschedulejob",
+    "permissionsportalsuperuser",
+    "permissionsdelegatedportaluseradmin"
   ],
   "permissionsetassignment": [
     "id",
@@ -3533,7 +3687,20 @@ angular.module('angular-normalize-salesforce')
     "maximumpermissionschattereditownpost",
     "maximumpermissionschattereditownrecordpost",
     "maximumpermissionsmergetopics",
-    "usedlicenses"
+    "usedlicenses",
+    "maximumpermissionsdataexport",
+    "maximumpermissionsmanageselfservice",
+    "maximumpermissionsmanagecssusers",
+    "maximumpermissionsactivateorder",
+    "maximumpermissionsmanagedashboards",
+    "maximumpermissionsapiuseronly",
+    "maximumpermissionseditactivatedorders",
+    "maximumpermissionsinboundmigrationtoolsuser",
+    "maximumpermissionseditreports",
+    "maximumpermissionsoutboundmigrationtoolsuser",
+    "maximumpermissionsschedulejob",
+    "maximumpermissionsportalsuperuser",
+    "maximumpermissionsdelegatedportaluseradmin"
   ],
   "permissionsetlicenseassign": [
     "id",
@@ -3919,7 +4086,20 @@ angular.module('angular-normalize-salesforce')
     "systemmodstamp",
     "description",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "permissionsdataexport",
+    "permissionsmanageselfservice",
+    "permissionsmanagecssusers",
+    "permissionsactivateorder",
+    "permissionsmanagedashboards",
+    "permissionsapiuseronly",
+    "permissionseditactivatedorders",
+    "permissionsinboundmigrationtoolsuser",
+    "permissionseditreports",
+    "permissionsoutboundmigrationtoolsuser",
+    "permissionsschedulejob",
+    "permissionsportalsuperuser",
+    "permissionsdelegatedportaluseradmin"
   ],
   "publisher": [
     "id",
@@ -4417,7 +4597,10 @@ angular.module('angular-normalize-salesforce')
     "recurrencedayofmonth",
     "recurrenceinstance",
     "recurrencemonthofyear",
-    "recurrenceregeneratedtype"
+    "recurrenceregeneratedtype",
+    "whocount",
+    "whatcount",
+    "isvisibleinselfservice"
   ],
   "streamingchannel": [
     "id",
@@ -4533,7 +4716,8 @@ angular.module('angular-normalize-salesforce')
     "lastmodifiedbyid",
     "systemmodstamp",
     "isdeleted",
-    "type"
+    "type",
+    "accountid"
   ],
   "userentityaccess": [
     "id",
@@ -4703,7 +4887,11 @@ angular.module('angular-normalize-salesforce')
     "digestfrequency",
     "defaultgroupnotificationfrequency",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "userpermissionsavantgouser",
+    "portalrole",
+    "isportalenabled",
+    "isportalselfregistered"
   ],
   "userfeed": [
     "id",
@@ -4929,7 +5117,8 @@ angular.module('angular-normalize-salesforce')
     "developername",
     "portalaccountid",
     "portaltype",
-    "portalaccountownerid"
+    "portalaccountownerid",
+    "portalrole"
   ],
   "usershare": [
     "id",
@@ -4991,5 +5180,400 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "systemmodstamp"
+  ],
+  "leadtag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "notetag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "opportunitytag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "orderhistory": [
+    "id",
+    "isdeleted",
+    "orderid",
+    "createdbyid",
+    "createddate",
+    "field",
+    "oldvalue",
+    "newvalue"
+  ],
+  "orderfeed": [
+    "id",
+    "parentid",
+    "type",
+    "createdbyid",
+    "createddate",
+    "isdeleted",
+    "lastmodifieddate",
+    "systemmodstamp",
+    "commentcount",
+    "likecount",
+    "title",
+    "body",
+    "linkurl",
+    "relatedrecordid",
+    "contentdata",
+    "contentfilename",
+    "contentdescription",
+    "contenttype",
+    "contentsize",
+    "insertedbyid"
+  ],
+  "order": [
+    "id",
+    "ownerid",
+    "contractid",
+    "accountid",
+    "pricebook2id",
+    "originalorderid",
+    "effectivedate",
+    "enddate",
+    "isreductionorder",
+    "status",
+    "description",
+    "customerauthorizedbyid",
+    "companyauthorizedbyid",
+    "type",
+    "billingstreet",
+    "billingcity",
+    "billingstate",
+    "billingpostalcode",
+    "billingcountry",
+    "billinglatitude",
+    "billinglongitude",
+    "billingaddress",
+    "shippingstreet",
+    "shippingcity",
+    "shippingstate",
+    "shippingpostalcode",
+    "shippingcountry",
+    "shippinglatitude",
+    "shippinglongitude",
+    "shippingaddress",
+    "activateddate",
+    "activatedbyid",
+    "statuscode",
+    "currencyisocode",
+    "ordernumber",
+    "totalamount",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted",
+    "systemmodstamp",
+    "lastvieweddate",
+    "lastreferenceddate"
+  ],
+  "orderitem": [
+    "id",
+    "isdeleted",
+    "orderid",
+    "pricebookentryid",
+    "originalorderitemid",
+    "availablequantity",
+    "quantity",
+    "currencyisocode",
+    "unitprice",
+    "listprice",
+    "servicedate",
+    "enddate",
+    "description",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "orderitemnumber"
+  ],
+  "orderitemhistory": [
+    "id",
+    "isdeleted",
+    "orderitemid",
+    "createdbyid",
+    "createddate",
+    "field",
+    "oldvalue",
+    "newvalue"
+  ],
+  "orderitemfeed": [
+    "id",
+    "parentid",
+    "type",
+    "createdbyid",
+    "createddate",
+    "isdeleted",
+    "lastmodifieddate",
+    "systemmodstamp",
+    "commentcount",
+    "likecount",
+    "title",
+    "body",
+    "linkurl",
+    "relatedrecordid",
+    "contentdata",
+    "contentfilename",
+    "contentdescription",
+    "contenttype",
+    "contentsize",
+    "insertedbyid"
+  ],
+  "ordertag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "ordershare": [
+    "id",
+    "orderid",
+    "userorgroupid",
+    "orderaccesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "reporttag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "selfserviceuser": [
+    "id",
+    "lastname",
+    "firstname",
+    "name",
+    "username",
+    "email",
+    "isactive",
+    "timezonesidkey",
+    "localesidkey",
+    "contactid",
+    "languagelocalekey",
+    "superuser",
+    "lastlogindate",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp"
+  ],
+  "solutiontag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "tagdefinition": [
+    "id",
+    "name",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "isdeleted",
+    "type"
+  ],
+  "taskrelation": [
+    "id",
+    "relationid",
+    "taskid",
+    "iswhat",
+    "accountid",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "isdeleted"
+  ],
+  "tasktag": [
+    "id",
+    "tagdefinitionid",
+    "itemid",
+    "createddate",
+    "systemmodstamp",
+    "isdeleted",
+    "name",
+    "type"
+  ],
+  "taskwhorelation": [
+    "id",
+    "relationid",
+    "taskid",
+    "accountid",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "isdeleted",
+    "type"
+  ],
+  "document_management__feed": [
+    "id",
+    "parentid",
+    "type",
+    "createdbyid",
+    "createddate",
+    "isdeleted",
+    "lastmodifieddate",
+    "systemmodstamp",
+    "commentcount",
+    "likecount",
+    "title",
+    "body",
+    "linkurl",
+    "relatedrecordid",
+    "contentdata",
+    "contentfilename",
+    "contentdescription",
+    "contenttype",
+    "contentsize",
+    "insertedbyid"
+  ],
+  "document_management__history": [
+    "id",
+    "isdeleted",
+    "parentid",
+    "createdbyid",
+    "createddate",
+    "field",
+    "oldvalue",
+    "newvalue"
+  ],
+  "emailmessage": [
+    "id",
+    "parentid",
+    "activityid",
+    "createdbyid",
+    "createddate",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "textbody",
+    "htmlbody",
+    "headers",
+    "subject",
+    "fromname",
+    "fromaddress",
+    "toaddress",
+    "ccaddress",
+    "bccaddress",
+    "incoming",
+    "hasattachment",
+    "status",
+    "messagedate",
+    "isdeleted",
+    "replytoemailmessageid",
+    "isexternallyvisible"
+  ],
+  "franchise_agreement__history": [
+    "id",
+    "isdeleted",
+    "parentid",
+    "createdbyid",
+    "createddate",
+    "field",
+    "oldvalue",
+    "newvalue"
+  ],
+  "franchise_agreement__share": [
+    "id",
+    "parentid",
+    "userorgroupid",
+    "accesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "franchise_area__feed": [
+    "id",
+    "parentid",
+    "type",
+    "createdbyid",
+    "createddate",
+    "isdeleted",
+    "lastmodifieddate",
+    "systemmodstamp",
+    "commentcount",
+    "likecount",
+    "title",
+    "body",
+    "linkurl",
+    "relatedrecordid",
+    "contentdata",
+    "contentfilename",
+    "contentdescription",
+    "contenttype",
+    "contentsize",
+    "insertedbyid"
+  ],
+  "franchise_area__history": [
+    "id",
+    "isdeleted",
+    "parentid",
+    "createdbyid",
+    "createddate",
+    "field",
+    "oldvalue",
+    "newvalue"
+  ],
+  "region__history": [
+    "id",
+    "isdeleted",
+    "parentid",
+    "createdbyid",
+    "createddate",
+    "field",
+    "oldvalue",
+    "newvalue"
+  ],
+  "region__share": [
+    "id",
+    "parentid",
+    "userorgroupid",
+    "accesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
   ]
 }
