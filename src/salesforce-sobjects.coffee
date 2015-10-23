@@ -69,7 +69,9 @@ angular.module('angular-normalize-salesforce')
     "jigsawcompanyid",
     "accountsource",
     "sicdesc",
-    "iscustomerportal"
+    "iscustomerportal",
+    "billinggeocodeaccuracy",
+    "shippinggeocodeaccuracy"
   ],
   "accountcontactrole": [
     "id",
@@ -129,7 +131,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "accountshare": [
     "id",
@@ -244,7 +247,8 @@ angular.module('angular-normalize-salesforce')
     "enddatetime",
     "startdatetime",
     "primarywhoid",
-    "primaryaccountid"
+    "primaryaccountid",
+    "activitysubtype"
   ],
   "announcement": [
     "id",
@@ -380,7 +384,10 @@ angular.module('angular-normalize-salesforce')
     "canvasselectedlocations",
     "canvasoptions",
     "type",
-    "applicationid"
+    "applicationid",
+    "usersortorder",
+    "isvisible",
+    "isaccessible"
   ],
   "asset": [
     "id",
@@ -427,7 +434,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "assettag": [
     "id",
@@ -481,7 +489,9 @@ angular.module('angular-normalize-salesforce')
     "contentsize",
     "fileextension",
     "contenturl",
-    "externaldatasourcename"
+    "externaldatasourcename",
+    "externaldatasourcetype",
+    "sharingoption"
   ],
   "apextrigger": [
     "id",
@@ -731,7 +741,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "campaignmember": [
     "id",
@@ -886,7 +897,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "casehistory": [
     "id",
@@ -1104,7 +1116,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "chatteractivity": [
     "id",
@@ -1145,7 +1158,9 @@ angular.module('angular-normalize-salesforce')
     "contentsize",
     "fileextension",
     "contenturl",
-    "externaldatasourcename"
+    "externaldatasourcename",
+    "externaldatasourcetype",
+    "sharingoption"
   ],
   "community": [
     "id",
@@ -1247,7 +1262,9 @@ angular.module('angular-normalize-salesforce')
     "photourl",
     "jigsaw",
     "jigsawcontactid",
-    "canallowportalselfreg"
+    "canallowportalselfreg",
+    "othergeocodeaccuracy",
+    "mailinggeocodeaccuracy"
   ],
   "contactfeed": [
     "id",
@@ -1269,7 +1286,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "contacthistory": [
     "id",
@@ -1362,7 +1380,8 @@ angular.module('angular-normalize-salesforce')
     "contentsize",
     "filetype",
     "fileextension",
-    "contentmodifieddate"
+    "contentmodifieddate",
+    "sharingoption"
   ],
   "contentdocumentfeed": [
     "id",
@@ -1384,7 +1403,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "contentdocumenthistory": [
     "id",
@@ -1461,7 +1481,9 @@ angular.module('angular-normalize-salesforce')
     "externaldocumentinfo2",
     "externaldatasourceid",
     "checksum",
-    "ismajorversion"
+    "ismajorversion",
+    "sharingoption",
+    "textpreview"
   ],
   "contentversionhistory": [
     "id",
@@ -1554,7 +1576,9 @@ angular.module('angular-normalize-salesforce')
     "shippingcountry",
     "shippinglatitude",
     "shippinglongitude",
-    "shippingaddress"
+    "shippingaddress",
+    "billinggeocodeaccuracy",
+    "shippinggeocodeaccuracy"
   ],
   "contractcontactrole": [
     "id",
@@ -1589,7 +1613,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "contracthistory": [
     "id",
@@ -1744,7 +1769,8 @@ angular.module('angular-normalize-salesforce')
     "lastvieweddate",
     "lastreferenceddate",
     "dashboardresultrefresheddate",
-    "dashboardresultrunninguser"
+    "dashboardresultrunninguser",
+    "foldername"
   ],
   "dashboardcomponent": [
     "id",
@@ -1771,7 +1797,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "dashboardfeed": [
     "id",
@@ -1793,7 +1820,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "dashboardtag": [
     "id",
@@ -1839,7 +1867,10 @@ angular.module('angular-normalize-salesforce')
     "iscomplex",
     "serviceid",
     "namespace",
-    "namespaceprefix"
+    "namespaceprefix",
+    "developername",
+    "contextservicedatatypeid",
+    "contextwsdldatatypeid"
   ],
   "document": [
     "id",
@@ -1999,7 +2030,8 @@ angular.module('angular-normalize-salesforce')
     "createdbyid",
     "lastmodifieddate",
     "lastmodifiedbyid",
-    "systemmodstamp"
+    "systemmodstamp",
+    "isactive"
   ],
   "emailtemplate": [
     "id",
@@ -2025,7 +2057,9 @@ angular.module('angular-normalize-salesforce')
     "lastmodifiedbyid",
     "systemmodstamp",
     "apiversion",
-    "markup"
+    "markup",
+    "uitype",
+    "entitytype"
   ],
   "duplicaterecorditem": [
     "id",
@@ -2066,7 +2100,22 @@ angular.module('angular-normalize-salesforce')
     "helpsettingpagename",
     "helpsettingpageurl",
     "runninguserentityaccessid",
-    "publisherid"
+    "publisherid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "iscustomsetting",
+    "isdeprecatedandhidden",
+    "isreplicateable",
+    "isretrieveable",
+    "issearchlayoutable",
+    "issearchable",
+    "istriggerable",
+    "isidenabled",
+    "isevercreatable",
+    "iseverupdatable",
+    "iseverdeletable",
+    "islayoutable",
+    "recordtypessupported"
   ],
   "entityparticle": [
     "id",
@@ -2095,7 +2144,34 @@ angular.module('angular-normalize-salesforce')
     "isapifilterable",
     "isapisortable",
     "isapigroupable",
-    "islistvisible"
+    "islistvisible",
+    "valuetypeid",
+    "isautonumber",
+    "bytelength",
+    "iscasesensitive",
+    "isunique",
+    "iscreatable",
+    "isupdatable",
+    "isdefaultedoncreate",
+    "iswriterequiresmasterread",
+    "ispermissionable",
+    "isencrypted",
+    "digits",
+    "inlinehelptext",
+    "relationshipname",
+    "referencetargetfield",
+    "name",
+    "mask",
+    "masktype",
+    "islayoutable",
+    "isdependentpicklist",
+    "isdeprecatedandhidden",
+    "isdisplaylocationindecimal",
+    "defaultvalueformula",
+    "isidlookup",
+    "isnamepointing",
+    "relationshiporder",
+    "referenceto"
   ],
   "entitysubscription": [
     "id",
@@ -2150,7 +2226,8 @@ angular.module('angular-normalize-salesforce')
     "isreminderset",
     "whocount",
     "whatcount",
-    "isvisibleinselfservice"
+    "isvisibleinselfservice",
+    "eventsubtype"
   ],
   "eventlogfile": [
     "id",
@@ -2189,7 +2266,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "externaldatasource": [
     "id",
@@ -2210,7 +2288,8 @@ angular.module('angular-normalize-salesforce')
     "apikey",
     "largeiconid",
     "smalliconid",
-    "customconfiguration"
+    "customconfiguration",
+    "iswritable"
   ],
   "eventrelation": [
     "id",
@@ -2345,7 +2424,9 @@ angular.module('angular-normalize-salesforce')
     "runninguserfieldaccessid",
     "relationshipname",
     "referenceto",
-    "referencetargetfield"
+    "referencetargetfield",
+    "valuetypeid",
+    "isindexed"
   ],
   "fiscalyearsettings": [
     "id",
@@ -2383,7 +2464,8 @@ angular.module('angular-normalize-salesforce')
     "revision",
     "action",
     "editedattribute",
-    "value"
+    "value",
+    "isvaluerichtext"
   ],
   "folder": [
     "id",
@@ -2410,7 +2492,9 @@ angular.module('angular-normalize-salesforce')
     "systemmodstamp",
     "currentelement",
     "interviewlabel",
-    "pauselabel"
+    "pauselabel",
+    "ownerid",
+    "guid"
   ],
   "forecastshare": [
     "id",
@@ -2498,7 +2582,8 @@ angular.module('angular-normalize-salesforce')
     "insertedbyid",
     "bestcommentid",
     "hascontent",
-    "haslink"
+    "haslink",
+    "isrichtext"
   ],
   "holiday": [
     "id",
@@ -2613,7 +2698,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "lead": [
     "id",
@@ -2670,7 +2756,8 @@ angular.module('angular-normalize-salesforce')
     "hasoptedoutofemail",
     "donotcall",
     "hasoptedoutoffax",
-    "lasttransferdate"
+    "lasttransferdate",
+    "geocodeaccuracy"
   ],
   "leadshare": [
     "id",
@@ -2815,7 +2902,8 @@ angular.module('angular-normalize-salesforce')
     "enddatetime",
     "startdatetime",
     "primarywhoid",
-    "primaryaccountid"
+    "primaryaccountid",
+    "activitysubtype"
   ],
   "listviewchartinstance": [
     "id",
@@ -2883,7 +2971,11 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "systemmodstamp",
-    "category"
+    "category",
+    "securityoptionsattachmentscannedforxss",
+    "securityoptionsattachmenthasxssthreat",
+    "securityoptionsattachmentscannedforflash",
+    "securityoptionsattachmenthasflash"
   ],
   "matchingrule": [
     "id",
@@ -2935,7 +3027,10 @@ angular.module('angular-normalize-salesforce')
     "lastmodifiedbyid",
     "systemmodstamp",
     "endpoint",
-    "principaltype"
+    "principaltype",
+    "calloutoptionsgenerateauthorizationheader",
+    "calloutoptionsallowmergefieldsinheader",
+    "calloutoptionsallowmergefieldsinbody"
   ],
   "matchingruleitem": [
     "id",
@@ -3047,7 +3142,8 @@ angular.module('angular-normalize-salesforce')
     "enddatetime",
     "startdatetime",
     "primarywhoid",
-    "primaryaccountid"
+    "primaryaccountid",
+    "activitysubtype"
   ],
   "opportunity": [
     "id",
@@ -3085,7 +3181,9 @@ angular.module('angular-normalize-salesforce')
     "fiscal",
     "lastvieweddate",
     "lastreferenceddate",
-    "recordtypeid"
+    "recordtypeid",
+    "hasopenactivity",
+    "hasoverduetask"
   ],
   "oauthtoken": [
     "id",
@@ -3207,7 +3305,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "opportunityshare": [
     "id",
@@ -3250,7 +3349,8 @@ angular.module('angular-normalize-salesforce')
     "contentsize",
     "fileextension",
     "contenturl",
-    "externaldatasourcename"
+    "externaldatasourcename",
+    "externaldatasourcetype"
   ],
   "organization": [
     "id",
@@ -3295,7 +3395,8 @@ angular.module('angular-normalize-salesforce')
     "createddate",
     "createdbyid",
     "lastmodifieddate",
-    "lastmodifiedbyid"
+    "lastmodifiedbyid",
+    "geocodeaccuracy"
   ],
   "packagelicense": [
     "id",
@@ -3524,7 +3625,9 @@ angular.module('angular-normalize-salesforce')
     "permissionsoutboundmigrationtoolsuser",
     "permissionsschedulejob",
     "permissionsportalsuperuser",
-    "permissionsdelegatedportaluseradmin"
+    "permissionsdelegatedportaluseradmin",
+    "permissionslightningexperienceuser",
+    "permissionsselectfilesfromsalesforce"
   ],
   "permissionsetassignment": [
     "id",
@@ -3700,7 +3803,9 @@ angular.module('angular-normalize-salesforce')
     "maximumpermissionsoutboundmigrationtoolsuser",
     "maximumpermissionsschedulejob",
     "maximumpermissionsportalsuperuser",
-    "maximumpermissionsdelegatedportaluseradmin"
+    "maximumpermissionsdelegatedportaluseradmin",
+    "maximumpermissionslightningexperienceuser",
+    "maximumpermissionsselectfilesfromsalesforce"
   ],
   "permissionsetlicenseassign": [
     "id",
@@ -3737,7 +3842,9 @@ angular.module('angular-normalize-salesforce')
     "iconwidth",
     "iconurl",
     "primarycolor",
-    "relatedsourceentity"
+    "relatedsourceentity",
+    "actiontarget",
+    "section"
   ],
   "pricebook2": [
     "id",
@@ -3831,7 +3938,8 @@ angular.module('angular-normalize-salesforce')
     "isdeleted",
     "createddate",
     "createdbyid",
-    "systemmodstamp"
+    "systemmodstamp",
+    "processnodeid"
   ],
   "processinstancenode": [
     "id",
@@ -3885,7 +3993,9 @@ angular.module('angular-normalize-salesforce')
     "systemmodstamp",
     "family",
     "currencyisocode",
-    "isdeleted"
+    "isdeleted",
+    "lastvieweddate",
+    "lastreferenceddate"
   ],
   "product2feed": [
     "id",
@@ -3907,7 +4017,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "processinstancestep": [
     "id",
@@ -4099,14 +4210,18 @@ angular.module('angular-normalize-salesforce')
     "permissionsoutboundmigrationtoolsuser",
     "permissionsschedulejob",
     "permissionsportalsuperuser",
-    "permissionsdelegatedportaluseradmin"
+    "permissionsdelegatedportaluseradmin",
+    "permissionslightningexperienceuser",
+    "permissionsselectfilesfromsalesforce"
   ],
   "publisher": [
     "id",
     "durableid",
     "name",
     "namespaceprefix",
-    "issalesforce"
+    "issalesforce",
+    "majorversion",
+    "minorversion"
   ],
   "pushtopic": [
     "id",
@@ -4178,7 +4293,8 @@ angular.module('angular-normalize-salesforce')
     "relationshipname",
     "iscascadedelete",
     "isdeprecatedandhidden",
-    "isrestricteddelete"
+    "isrestricteddelete",
+    "junctionidlistname"
   ],
   "recordtypelocalization": [
     "id",
@@ -4199,7 +4315,8 @@ angular.module('angular-normalize-salesforce')
     "fieldid",
     "iscascadedelete",
     "isdeprecatedandhidden",
-    "isrestricteddelete"
+    "isrestricteddelete",
+    "junctionidlistname"
   ],
   "report": [
     "id",
@@ -4217,7 +4334,8 @@ angular.module('angular-normalize-salesforce')
     "systemmodstamp",
     "format",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "foldername"
   ],
   "reportfeed": [
     "id",
@@ -4239,7 +4357,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "samlssoconfig": [
     "id",
@@ -4396,7 +4515,8 @@ angular.module('angular-normalize-salesforce')
     "createdbyid",
     "lastmodifieddate",
     "lastmodifiedbyid",
-    "systemmodstamp"
+    "systemmodstamp",
+    "optionsallowguestsupportapi"
   ],
   "sitefeed": [
     "id",
@@ -4418,7 +4538,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "solution": [
     "id",
@@ -4462,7 +4583,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "solutionstatus": [
     "id",
@@ -4543,7 +4665,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "taskstatus": [
     "id",
@@ -4600,7 +4723,8 @@ angular.module('angular-normalize-salesforce')
     "recurrenceregeneratedtype",
     "whocount",
     "whatcount",
-    "isvisibleinselfservice"
+    "isvisibleinselfservice",
+    "tasksubtype"
   ],
   "streamingchannel": [
     "id",
@@ -4702,7 +4826,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "undecidedeventrelation": [
     "id",
@@ -4728,7 +4853,11 @@ angular.module('angular-normalize-salesforce')
     "iseditable",
     "isdeletable",
     "isundeletable",
-    "entitydefinitionid"
+    "entitydefinitionid",
+    "ismergeable",
+    "isupdatable",
+    "isactivateable",
+    "isflsupdatable"
   ],
   "userlicense": [
     "id",
@@ -4891,7 +5020,11 @@ angular.module('angular-normalize-salesforce')
     "userpermissionsavantgouser",
     "portalrole",
     "isportalenabled",
-    "isportalselfregistered"
+    "isportalselfregistered",
+    "geocodeaccuracy",
+    "userpreferencespathassistantcollapsed",
+    "userpreferencescachediagnostics",
+    "userpreferenceslightningexperiencepreferred"
   ],
   "userfeed": [
     "id",
@@ -4913,7 +5046,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "userlistviewcriterion": [
     "id",
@@ -5466,7 +5600,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "document_management__history": [
     "id",
@@ -5544,7 +5679,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "franchise_area__history": [
     "id",
@@ -5575,5 +5711,179 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "isdeleted"
+  ],
+  "apexemailnotification": [
+    "id",
+    "isdeleted",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "userid",
+    "email"
+  ],
+  "contentfolderitem": [
+    "id",
+    "isdeleted",
+    "isfolder",
+    "parentcontentfolderid",
+    "title",
+    "filetype",
+    "contentsize",
+    "fileextension",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp"
+  ],
+  "flowinterviewshare": [
+    "id",
+    "parentid",
+    "userorgroupid",
+    "accesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "folderedcontentdocument": [
+    "id",
+    "isfolder",
+    "contentdocumentid",
+    "parentcontentfolderid",
+    "isdeleted",
+    "title",
+    "filetype",
+    "contentsize",
+    "fileextension",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp"
+  ],
+  "picklistvalueinfo": [
+    "id",
+    "durableid",
+    "value",
+    "label",
+    "isdefaultvalue",
+    "isactive",
+    "validfor",
+    "entityparticleid"
+  ],
+  "platformcachepartition": [
+    "id",
+    "isdeleted",
+    "developername",
+    "language",
+    "masterlabel",
+    "namespaceprefix",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "description",
+    "isdefaultpartition"
+  ],
+  "platformcachepartitiontype": [
+    "id",
+    "isdeleted",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "platformcachepartitionid",
+    "cachetype",
+    "allocatedcapacity",
+    "allocatedpurchasedcapacity"
+  ],
+  "searchlayout": [
+    "id",
+    "durableid",
+    "label",
+    "layouttype",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "entitydefinitionid",
+    "fieldsdisplayed",
+    "buttonsdisplayed"
+  ],
+  "secureagentscluster": [
+    "id",
+    "isdeleted",
+    "developername",
+    "language",
+    "masterlabel",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "description"
+  ],
+  "setupaudittrail": [
+    "id",
+    "action",
+    "section",
+    "createddate",
+    "createdbyid",
+    "display",
+    "delegateuser"
+  ],
+  "userappmenucustomization": [
+    "id",
+    "ownerid",
+    "isdeleted",
+    "currencyisocode",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "applicationid",
+    "sortorder"
+  ],
+  "userappmenucustomizationshare": [
+    "id",
+    "parentid",
+    "userorgroupid",
+    "accesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "userappmenuitem": [
+    "id",
+    "appmenuitemid",
+    "applicationid",
+    "label",
+    "description",
+    "name",
+    "usersortorder",
+    "sortorder",
+    "type",
+    "logourl",
+    "iconurl",
+    "infourl",
+    "starturl",
+    "mobilestarturl",
+    "isvisible",
+    "isusingadminauthorization"
+  ],
+  "userfieldaccess": [
+    "id",
+    "durableid",
+    "userid",
+    "isupdatable",
+    "iscreatable",
+    "isaccessible",
+    "entitydefinitionid",
+    "fielddefinitionid"
   ]
 }
