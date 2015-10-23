@@ -102,7 +102,7 @@ angular.module('myModule')
 ### [Internal] Load describe data from Salesforce REST JS
 
 ```javascript
-DEBUG.pbJSRestConnector.client.apiVersion = "v34.0"
+DEBUG.pbJSRestConnector.client.apiVersion = "v35.0"
 
 allObjects = []
 
