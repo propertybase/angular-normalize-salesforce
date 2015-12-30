@@ -2227,7 +2227,8 @@ angular.module('angular-normalize-salesforce')
     "whocount",
     "whatcount",
     "isvisibleinselfservice",
-    "eventsubtype"
+    "eventsubtype",
+    "eventwhoids"
   ],
   "eventlogfile": [
     "id",
@@ -4724,7 +4725,8 @@ angular.module('angular-normalize-salesforce')
     "whocount",
     "whatcount",
     "isvisibleinselfservice",
-    "tasksubtype"
+    "tasksubtype",
+    "taskwhoids"
   ],
   "streamingchannel": [
     "id",
