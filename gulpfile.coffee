@@ -15,6 +15,7 @@ src_files = [
   'src/salesforce-standard-fields.coffee',
   'src/salesforce-standard-objects.coffee',
   'src/salesforce-sobjects.coffee',
+  'src/salesforce-array-values.coffee',
   'src/normalize-salesforce.coffee'
 ]
 

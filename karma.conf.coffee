@@ -18,6 +18,7 @@ module.exports = (config) ->
       'src/salesforce-standard-objects.coffee',
       'src/salesforce-sobjects.coffee',
       'src/normalize-salesforce.coffee',
+      'src/salesforce-array-values.coffee',
       'test/*.coffee',
 
       'node_modules/chai/chai.js',

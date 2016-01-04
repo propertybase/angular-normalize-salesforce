@@ -123,6 +123,13 @@ describe 'Service: normalizeSalesforce', ->
         expect normalizeSalesforce.denormalize('shippingcity', object)
           .to.equal 'shippingcity'
 
+      it 'does not touch value arrays', ->
+        eventObject =
+          eventwhoids: ['id1', 'id2', 'id3']
+
+        expect normalizeSalesforce.denormalize(eventObject, 'event')
+          .to.deep.equal eventObject
+
     context 'parent relations', ->
       it 'denormalizes parent relation fields if a mapping is provided', ->
         expect normalizeSalesforce.denormalize(

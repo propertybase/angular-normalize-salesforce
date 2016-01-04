@@ -5,12 +5,14 @@ angular.module('angular-normalize-salesforce')
   ansSalesforceSObjects,
   ansSalesforceStandardObjects,
   ansSalesforceStandardFields
+  ansSalesforceArrayValues
 ) ->
   new class NormalizeSalesforce
     constructor: ->
       @standardFields = ansSalesforceStandardFields
       @standardObjects = ansSalesforceStandardObjects
       @sObjectFields = ansSalesforceSObjects
+      @arrayValues = ansSalesforceArrayValues
 
     normalize: (part) =>
       if _.isNull(part) || _.isUndefined(part)
@@ -95,7 +97,7 @@ angular.module('angular-normalize-salesforce')
       denormalized = {}
 
       _.each object, (value, key) =>
-        if _(value).isObject() && !_(value).isFunction()
+        if _(value).isObject() && !_(value).isFunction() && !_.includes(@arrayValues, key)
           denormalized[@denormalize(key, sObject)] = @denormalize(
             value, sObject
           )
