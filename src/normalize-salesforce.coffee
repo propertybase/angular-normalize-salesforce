@@ -66,7 +66,7 @@ angular.module('angular-normalize-salesforce')
       normalized
 
     _denormalize: (part, avoidList, prefix=undefined) ->
-      unless _(avoidList).contains(part)
+      unless _(avoidList).contains(part) || _.endsWith(part, '__s')
         if prefix then "#{prefix}.#{part}__c" else "#{part}__c"
       else
         if prefix then "#{prefix}.#{part}" else part

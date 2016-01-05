@@ -152,6 +152,25 @@ describe 'Service: normalizeSalesforce', ->
         ['tickersymbol', 'field2__c', 'type', 'ns__field3__c']
       )
 
+      expect(normalizeSalesforce.denormalize(
+        ['tickersymbol', 'field2', 'type', 'ns__field3'], 'account'
+      )).to.deep.equal(
+        ['tickersymbol', 'field2__c', 'type', 'ns__field3__c']
+      )
+
+    it 'does not denormalize compound field parts', ->
+      expect(normalizeSalesforce.denormalize(
+        ['compound_part__s', 'field2'], 'customobject'
+      )).to.deep.equal(
+        ['compound_part__s', 'field2__c']
+      )
+
+      expect(normalizeSalesforce.denormalize(
+        ['normal__s__field', 'field2'], 'customobject'
+      )).to.deep.equal(
+        ['normal__s__field__c', 'field2__c']
+      )
+
     it 'supports objects', ->
       object =
         'field1': 'value1'
