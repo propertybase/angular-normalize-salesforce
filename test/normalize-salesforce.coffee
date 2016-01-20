@@ -86,6 +86,14 @@ describe 'Service: normalizeSalesforce', ->
       expect normalizeSalesforce.normalize(undefined)
         .to.be.undefined
 
+    it 'ignores date values', ->
+      object =
+        activitydate: new Date()
+      objectJson = JSON.stringify(object)
+
+      normalizedJson = JSON.stringify(normalizeSalesforce.normalize(object))
+      expect(objectJson).to.equal(normalizedJson)
+
   describe '#denormalize', ->
     context 'of custom object', ->
       object = 'customobject'

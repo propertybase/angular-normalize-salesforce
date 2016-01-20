@@ -57,7 +57,7 @@ angular.module('angular-normalize-salesforce')
       normalized = {}
 
       _.each object, (value, key) =>
-        if _(value).isObject() && !_(value).isFunction()
+        if _(value).isObject() && !_(value).isFunction() && !_.isDate(value)
           normalized[@normalize(key)] = @normalize(value)
         else
           normalized[@normalize(key)] = value
