@@ -1264,7 +1264,9 @@ angular.module('angular-normalize-salesforce')
     "jigsawcontactid",
     "canallowportalselfreg",
     "othergeocodeaccuracy",
-    "mailinggeocodeaccuracy"
+    "mailinggeocodeaccuracy",
+    "middlename",
+    "suffix"
   ],
   "contactfeed": [
     "id",
@@ -2757,7 +2759,9 @@ angular.module('angular-normalize-salesforce')
     "donotcall",
     "hasoptedoutoffax",
     "lasttransferdate",
-    "geocodeaccuracy"
+    "geocodeaccuracy",
+    "middlename",
+    "suffix"
   ],
   "leadshare": [
     "id",
@@ -3076,7 +3080,9 @@ angular.module('angular-normalize-salesforce')
     "phone",
     "username",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "middlename",
+    "suffix"
   ],
   "opportunitycompetitor": [
     "id",
@@ -3627,7 +3633,8 @@ angular.module('angular-normalize-salesforce')
     "permissionsportalsuperuser",
     "permissionsdelegatedportaluseradmin",
     "permissionslightningexperienceuser",
-    "permissionsselectfilesfromsalesforce"
+    "permissionsselectfilesfromsalesforce",
+    "permissionsmanagesandboxes"
   ],
   "permissionsetassignment": [
     "id",
@@ -3805,7 +3812,8 @@ angular.module('angular-normalize-salesforce')
     "maximumpermissionsportalsuperuser",
     "maximumpermissionsdelegatedportaluseradmin",
     "maximumpermissionslightningexperienceuser",
-    "maximumpermissionsselectfilesfromsalesforce"
+    "maximumpermissionsselectfilesfromsalesforce",
+    "maximumpermissionsmanagesandboxes"
   ],
   "permissionsetlicenseassign": [
     "id",
@@ -4212,7 +4220,8 @@ angular.module('angular-normalize-salesforce')
     "permissionsportalsuperuser",
     "permissionsdelegatedportaluseradmin",
     "permissionslightningexperienceuser",
-    "permissionsselectfilesfromsalesforce"
+    "permissionsselectfilesfromsalesforce",
+    "permissionsmanagesandboxes"
   ],
   "publisher": [
     "id",
@@ -4266,7 +4275,9 @@ angular.module('angular-normalize-salesforce')
     "phone",
     "lastvieweddate",
     "lastreferenceddate",
-    "language"
+    "language",
+    "middlename",
+    "suffix"
   ],
   "recordtype": [
     "id",
@@ -5024,7 +5035,9 @@ angular.module('angular-normalize-salesforce')
     "geocodeaccuracy",
     "userpreferencespathassistantcollapsed",
     "userpreferencescachediagnostics",
-    "userpreferenceslightningexperiencepreferred"
+    "userpreferenceslightningexperiencepreferred",
+    "middlename",
+    "suffix"
   ],
   "userfeed": [
     "id",
@@ -5375,7 +5388,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "order": [
     "id",
@@ -5421,7 +5435,9 @@ angular.module('angular-normalize-salesforce')
     "isdeleted",
     "systemmodstamp",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "billinggeocodeaccuracy",
+    "shippinggeocodeaccuracy"
   ],
   "orderitem": [
     "id",
@@ -5474,7 +5490,8 @@ angular.module('angular-normalize-salesforce')
     "contentdescription",
     "contenttype",
     "contentsize",
-    "insertedbyid"
+    "insertedbyid",
+    "isrichtext"
   ],
   "ordertag": [
     "id",
