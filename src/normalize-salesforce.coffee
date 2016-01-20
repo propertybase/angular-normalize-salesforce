@@ -57,7 +57,7 @@ angular.module('angular-normalize-salesforce')
       normalized = {}
 
       _.each object, (value, key) =>
-        if _(value).isObject() && !_(value).isFunction() && !_.isDate(value)
+        if _(value).isObject() && !_(value).isFunction() && !_(value).isDate()
           normalized[@normalize(key)] = @normalize(value)
         else
           normalized[@normalize(key)] = value
@@ -95,7 +95,7 @@ angular.module('angular-normalize-salesforce')
       denormalized = {}
 
       _.each object, (value, key) =>
-        if _(value).isObject() && !_(value).isFunction()
+        if _(value).isObject() && !_(value).isFunction() && !_(value).isDate()
           denormalized[@denormalize(key, sObject)] = @denormalize(
             value, sObject
           )

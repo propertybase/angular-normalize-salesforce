@@ -206,6 +206,16 @@ describe 'Service: normalizeSalesforce', ->
           'field2__c':
             'ns__field1__c': 'value2'
             'id': 1
+    
+    it 'ignores date values', ->
+      date = new Date()
+      object =
+        activitydate: date
+      objectJson = JSON.stringify
+        activitydate__c: date
+
+      normalizedJson = JSON.stringify(normalizeSalesforce.denormalize(object))
+      expect(objectJson).to.equal(normalizedJson)
 
   describe '#denormalizeObjectName', ->
     it 'adds __c to the name of a custom object', ->
