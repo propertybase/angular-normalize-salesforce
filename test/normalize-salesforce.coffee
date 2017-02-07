@@ -29,6 +29,16 @@ describe 'Service: normalizeSalesforce', ->
       expect normalizeSalesforce.normalize('ns__cField__c')
         .to.equal 'ns__cfield'
 
+    it 'does not normalize salesforce ids', ->
+      id = '00341000001sKYiAAM'
+      expect normalizeSalesforce.normalize(id)
+        .to.equal id
+
+    it 'normalizes non-salesforce ids', ->
+      id = '00341000001sKYiAAm'
+      expect normalizeSalesforce.normalize(id)
+        .to.not.equal id
+
     # ------------------
     # Object Operations
 

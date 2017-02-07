@@ -47,7 +47,10 @@ angular.module('angular-normalize-salesforce')
     # PRIVATE ----------
 
     _normalizeString: (string) ->
-      string.toLowerCase().replace(/__c$/, '')
+      if @_isSalesforceId string
+        string
+      else
+        string.toLowerCase().replace(/__c$/, '')
 
     _normalizeArray: (array) =>
       _.map array, (element) =>
@@ -104,3 +107,45 @@ angular.module('angular-normalize-salesforce')
         true
 
       denormalized
+
+    # Returns whether the given string is a salesforce id
+    _isSalesforceId: (value) ->
+      return false if typeof value != 'string'
+      return false if value.length != 18
+
+      shortId = value.substr(0, 15)
+      compareId = @_get18DigitSalesforceId(shortId)
+
+      # We check whether the computed 18 digit number euqals the stripped 15 digit number
+      # to make sure this is a SF id
+      value == compareId
+
+
+    _get18DigitSalesforceId: (id) ->
+      _isUppercase = (c) -> new RegExp(c).test uppercaseAlphabet
+
+      if id and id.length == 18
+        return id
+      if !(id and id.length == 15)
+        throw new Error('Salesforce Id was neither 18 nor 15 chars')
+      uppercaseAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+      i = undefined
+      j = undefined
+      flags = undefined
+      alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345'
+      i = 0
+      while i < 3
+        flags = 0
+        j = 0
+        while j < 5
+          if _isUppercase(id.charAt(i * 5 + j))
+            flags += 1 << j
+          j++
+        id += alphabet.charAt(flags)
+        i++
+      id
+
+
+
+
+
