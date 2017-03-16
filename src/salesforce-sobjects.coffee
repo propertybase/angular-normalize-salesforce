@@ -420,7 +420,8 @@ angular.module('angular-normalize-salesforce')
     "quantity",
     "description",
     "lastvieweddate",
-    "lastreferenceddate"
+    "lastreferenceddate",
+    "ownerid"
   ],
   "assetfeed": [
     "id",
@@ -2303,7 +2304,8 @@ angular.module('angular-normalize-salesforce')
     "largeiconid",
     "smalliconid",
     "customconfiguration",
-    "iswritable"
+    "iswritable",
+    "authproviderid"
   ],
   "eventrelation": [
     "id",
@@ -2358,7 +2360,8 @@ angular.module('angular-normalize-salesforce')
     "userid",
     "protocol",
     "username",
-    "password"
+    "password",
+    "authproviderid"
   ],
   "feedcomment": [
     "id",
@@ -3049,7 +3052,8 @@ angular.module('angular-normalize-salesforce')
     "principaltype",
     "calloutoptionsgenerateauthorizationheader",
     "calloutoptionsallowmergefieldsinheader",
-    "calloutoptionsallowmergefieldsinbody"
+    "calloutoptionsallowmergefieldsinbody",
+    "authproviderid"
   ],
   "matchingruleitem": [
     "id",
@@ -3653,7 +3657,8 @@ angular.module('angular-normalize-salesforce')
     "permissionslightningexperienceuser",
     "permissionsselectfilesfromsalesforce",
     "permissionsmanagesandboxes",
-    "permissionsmanageencryptionkeys"
+    "permissionsmanageencryptionkeys",
+    "permissionscreateworkbadgedefinition"
   ],
   "permissionsetassignment": [
     "id",
@@ -3833,7 +3838,8 @@ angular.module('angular-normalize-salesforce')
     "maximumpermissionslightningexperienceuser",
     "maximumpermissionsselectfilesfromsalesforce",
     "maximumpermissionsmanagesandboxes",
-    "maximumpermissionsmanageencryptionkeys"
+    "maximumpermissionsmanageencryptionkeys",
+    "maximumpermissionscreateworkbadgedefinition"
   ],
   "permissionsetlicenseassign": [
     "id",
@@ -3872,7 +3878,8 @@ angular.module('angular-normalize-salesforce')
     "primarycolor",
     "relatedsourceentity",
     "actiontarget",
-    "section"
+    "section",
+    "ismassaction"
   ],
   "pricebook2": [
     "id",
@@ -4242,7 +4249,8 @@ angular.module('angular-normalize-salesforce')
     "permissionslightningexperienceuser",
     "permissionsselectfilesfromsalesforce",
     "permissionsmanagesandboxes",
-    "permissionsmanageencryptionkeys"
+    "permissionsmanageencryptionkeys",
+    "permissionscreateworkbadgedefinition"
   ],
   "publisher": [
     "id",
@@ -6655,5 +6663,195 @@ angular.module('angular-normalize-salesforce')
     "lastmodifieddate",
     "lastmodifiedbyid",
     "isdeleted"
+  ],
+  "assetshare": [
+    "id",
+    "assetid",
+    "userorgroupid",
+    "assetaccesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "datacloudaddress": [
+    "id",
+    "currencyisocode",
+    "externalid",
+    "addressline1",
+    "addressline2",
+    "city",
+    "state",
+    "country",
+    "postalcode",
+    "latitude",
+    "longitude",
+    "geoaccuracycode",
+    "geoaccuracynum"
+  ],
+  "ownerchangeoptioninfo": [
+    "id",
+    "durableid",
+    "entitydefinitionid",
+    "name",
+    "label",
+    "iseditable",
+    "defaultvalue"
+  ],
+  "quotetemplaterichtextdata": [
+    "id",
+    "isdeleted",
+    "name",
+    "currencyisocode",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "data"
+  ],
+  "skill": [
+    "id",
+    "isdeleted",
+    "developername",
+    "language",
+    "masterlabel",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "lastvieweddate"
+  ],
+  "workaccess": [
+    "id",
+    "ownerid",
+    "isdeleted",
+    "currencyisocode",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "parentid",
+    "accesstype"
+  ],
+  "workaccessshare": [
+    "id",
+    "parentid",
+    "userorgroupid",
+    "accesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "workbadge": [
+    "id",
+    "isdeleted",
+    "currencyisocode",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "lastvieweddate",
+    "lastreferenceddate",
+    "sourceid",
+    "definitionid",
+    "recipientid",
+    "giverid",
+    "imageurl",
+    "description",
+    "message"
+  ],
+  "workbadgedefinition": [
+    "id",
+    "ownerid",
+    "isdeleted",
+    "name",
+    "currencyisocode",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "lastvieweddate",
+    "lastreferenceddate",
+    "iscompanywide",
+    "description",
+    "imageurl",
+    "isactive",
+    "limitnumber",
+    "islimitperuser",
+    "limitstartdate",
+    "givenbadgecount"
+  ],
+  "workbadgedefinitionfeed": [
+    "id",
+    "parentid",
+    "type",
+    "createdbyid",
+    "createddate",
+    "isdeleted",
+    "lastmodifieddate",
+    "systemmodstamp",
+    "commentcount",
+    "likecount",
+    "title",
+    "body",
+    "linkurl",
+    "isrichtext",
+    "relatedrecordid",
+    "contentdata",
+    "contentfilename",
+    "contentdescription",
+    "contenttype",
+    "contentsize",
+    "insertedbyid"
+  ],
+  "workbadgedefinitionhistory": [
+    "id",
+    "isdeleted",
+    "workbadgedefinitionid",
+    "createdbyid",
+    "createddate",
+    "field",
+    "oldvalue",
+    "newvalue"
+  ],
+  "workbadgedefinitionshare": [
+    "id",
+    "parentid",
+    "userorgroupid",
+    "accesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "workthanksshare": [
+    "id",
+    "parentid",
+    "userorgroupid",
+    "accesslevel",
+    "rowcause",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "isdeleted"
+  ],
+  "workthanks": [
+    "id",
+    "ownerid",
+    "isdeleted",
+    "currencyisocode",
+    "createddate",
+    "createdbyid",
+    "lastmodifieddate",
+    "lastmodifiedbyid",
+    "systemmodstamp",
+    "giverid",
+    "message",
+    "feeditemid"
   ]
 }
