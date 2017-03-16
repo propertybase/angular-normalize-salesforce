@@ -112,11 +112,13 @@ angular.module('angular-normalize-salesforce')
     _isSalesforceId: (value) ->
       return false if typeof value != 'string'
       return false if value.length != 18
+      return false unless /^[A-Za-z0-9]+$/.test value
 
       shortId = value.substr(0, 15)
       compareId = @_get18DigitSalesforceId(shortId)
 
-      # We check whether the computed 18 digit number euqals the stripped 15 digit number
+      # We check whether the computed 18 digit number
+      # euqals the stripped 15 digit number
       # to make sure this is a SF id
       value == compareId
 
@@ -144,8 +146,3 @@ angular.module('angular-normalize-salesforce')
         id += alphabet.charAt(flags)
         i++
       id
-
-
-
-
-

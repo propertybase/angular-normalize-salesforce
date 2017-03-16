@@ -39,6 +39,10 @@ describe 'Service: normalizeSalesforce', ->
       expect normalizeSalesforce.normalize(id)
         .to.not.equal id
 
+    it 'is robust agains special characters in 18-char strings', ->
+      expect normalizeSalesforce.normalize('abcde/gh(jklmnopqr')
+        .to.equal 'abcde/gh(jklmnopqr'
+
     # ------------------
     # Object Operations
 
@@ -216,7 +220,7 @@ describe 'Service: normalizeSalesforce', ->
           'field2__c':
             'ns__field1__c': 'value2'
             'id': 1
-    
+
     it 'ignores date values', ->
       date = new Date()
       object =
